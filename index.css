@@ -1,0 +1,138 @@
+/* Newsprint Global Rules */
+@layer base {
+  * {
+    border-radius: 0 !important;
+  }
+}
+
+/* Authentic Newspaper Drop Cap */
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  float: left;
+  font-size: 4.25rem;
+  line-height: 0.8;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  color: #111111;
+  font-weight: 900;
+}
+
+/* Rubber Ink Seal & Stamp */
+.editorial-stamp {
+  display: inline-block;
+  border: 2px solid #CC0000;
+  color: #CC0000;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 3px 9px;
+  transform: rotate(-2deg);
+  box-shadow: inset 0 0 0 1px rgba(204, 0, 0, 0.2);
+}
+
+.postmark-seal {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #CC0000;
+  color: #CC0000;
+  padding: 6px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transform: rotate(3deg);
+  opacity: 0.9;
+  user-select: none;
+}
+
+/* Classic Broadsheet Double Rules */
+.newspaper-double-b {
+  border-bottom: 3px double #111111;
+}
+
+.newspaper-double-t {
+  border-top: 3px double #111111;
+}
+
+.newspaper-triple-b {
+  border-bottom: 4px double #111111;
+  position: relative;
+}
+
+/* Newspaper Column Divider Hairline */
+.col-hairline {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .col-hairline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1.5rem;
+    width: 1px;
+    background: #E5E5E0;
+  }
+}
+
+/* Minimum 44px Touch Targets for Mobile Devices */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Smooth Scroll for Subnav */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print Media Optimization: Clean Archival Broadsheet Output */
+@media print {
+  /* Hide interactive widgets & chrome */
+  header,
+  footer,
+  .no-print,
+  button,
+  [data-cursor],
+  .fixed,
+  .sticky {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hard-shadow,
+  .hard-shadow-sm,
+  .hard-shadow-lg {
+    box-shadow: none !important;
+  }
+
+  * {
+    color: #000000 !important;
+    border-color: #222222 !important;
+  }
+}

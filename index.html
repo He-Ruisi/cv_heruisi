@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruisi HE (何瑞斯) | The Gazette & Portfolio</title>
+    <meta name="description" content="Personal CV and portfolio of Ruisi HE in Newsprint Edition — AI-augmented builder, physics background from SUSTech, Go + React developer." />
+    <meta property="og:title" content="Ruisi HE (何瑞斯) | The Gazette & Portfolio" />
+    <meta property="og:description" content="Indie Builder, Computational Thinker & AI-Augmented Developer (Go + React)." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111111'/%3E%3Crect x='3' y='3' width='26' height='26' fill='%23F9F9F7'/%3E%3Ctext x='16' y='22' font-family='Georgia, serif' font-weight='900' font-size='18' text-anchor='middle' fill='%23CC0000'%3EH%3C/text%3E%3C/svg%3E" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "何瑞斯 (Ruisi HE)",
+      "jobTitle": "Full-Stack Developer & Indie Builder",
+      "alumniOf": "Southern University of Science and Technology (SUSTech)",
+      "knowsAbout": ["Go", "React", "TypeScript", "AI-Augmented Development", "Computational Physics"],
+      "email": "r.s.he477@gmail.com"
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --newsprint-bg: #F9F9F7;
+        --newsprint-ink: #111111;
+        --newsprint-divider: #E5E5E0;
+        --newsprint-red: #CC0000;
+      }
+
+      * {
+        border-radius: 0 !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+        -ms-overflow-style: none;
+        scrollbar-width: thin;
+        scrollbar-color: #111111 #F9F9F7;
+      }
+      
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F9F9F7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #111111;
+      }
+
+      body {
+        font-family: 'Lora', Georgia, serif;
+        background-color: var(--newsprint-bg);
+        color: var(--newsprint-ink);
+        overflow-x: hidden;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23111111' fill-opacity='0.035' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      .font-serif, h1, h2, h3, .font-heading {
+        font-family: 'Playfair Display', 'Times New Roman', serif;
+      }
+      .font-body {
+        font-family: 'Lora', Georgia, serif;
+      }
+      .font-sans {
+        font-family: 'Inter', -apple-system, sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+      }
+
+      /* Hard Offset Newspaper Cutout Shadow */
+      .hard-shadow {
+        box-shadow: 4px 4px 0px 0px #111111;
+      }
+      .hard-shadow-sm {
+        box-shadow: 2px 2px 0px 0px #111111;
+      }
+      .hard-shadow-lg {
+        box-shadow: 6px 6px 0px 0px #111111;
+      }
+      .hard-shadow-red {
+        box-shadow: 4px 4px 0px 0px #CC0000;
+      }
+      .hard-shadow-hover {
+        transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+      }
+      .hard-shadow-hover:hover {
+        box-shadow: 4px 4px 0px 0px #111111;
+        transform: translate(-2px, -2px);
+      }
+
+      /* Newsprint line texture */
+      .newsprint-texture {
+        position: relative;
+      }
+      .newsprint-texture::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(0deg, transparent 97%, rgba(17,17,17,0.02) 100%),
+          linear-gradient(90deg, transparent 97%, rgba(17,17,17,0.02) 100%);
+        background-size: 4px 4px;
+        pointer-events: none;
+      }
+
+      /* Newspaper double line border */
+      .border-double-b {
+        border-bottom: 4px double #111111;
+      }
+      .border-double-t {
+        border-top: 4px double #111111;
+      }
+      .border-double-y {
+        border-top: 4px double #111111;
+        border-bottom: 4px double #111111;
+      }
+
+      /* Halftone simulation */
+      .halftone-bg {
+        background-image: radial-gradient(#111111 1px, transparent 1px);
+        background-size: 8px 8px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.0/",
+    "react": "https://esm.sh/react@^19.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.0/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.553.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.29.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.24"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
